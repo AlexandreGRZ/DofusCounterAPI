@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Rmr7NW36o1BdSh7megJ6yofKGPSH4QEmvFN4pEzs+tQ=",
+  "Source": "DofusAPI",
+  "BasePath": "_content/DofusAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
