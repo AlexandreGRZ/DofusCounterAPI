@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KcaLFafz2yA=",
+  "dgSpecHash": "FvNqMfOrESo=",
   "success": true,
-  "projectFilePath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj",
+  "projectFilePath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",

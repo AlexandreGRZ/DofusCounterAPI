@@ -22,3 +22,16 @@ C:\Workspace\Dofus\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.dll
 C:\Workspace\Dofus\DofusAPP\DofusData\obj\Debug\net8.0\refint\DofusData.dll
 C:\Workspace\Dofus\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.pdb
 C:\Workspace\Dofus\DofusAPP\DofusData\obj\Debug\net8.0\ref\DofusData.dll
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\bin\Debug\net8.0\DofusData.deps.json
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\bin\Debug\net8.0\DofusData.dll
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\bin\Debug\net8.0\DofusData.pdb
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.csproj.AssemblyReference.cache
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.AssemblyInfoInputs.cache
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.AssemblyInfo.cs
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.csproj.CoreCompileInputs.cache
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.sourcelink.json
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.dll
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\refint\DofusData.dll
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\DofusData.pdb
+C:\Workspace\Dofus\DofusCounterAPI\DofusAPP\DofusData\obj\Debug\net8.0\ref\DofusData.dll

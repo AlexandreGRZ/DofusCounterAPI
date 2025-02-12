@@ -648,11 +648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\DofusData.csproj",
+      "projectUniqueName": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\DofusData.csproj",
       "projectName": "DofusData",
-      "projectPath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\DofusData.csproj",
+      "projectPath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\DofusData.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\obj\\",
+      "outputPath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"

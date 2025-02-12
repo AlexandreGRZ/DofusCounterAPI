@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "92UFaj9/0tg=",
+  "dgSpecHash": "ngg3UueP9Hs=",
   "success": true,
-  "projectFilePath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusAPI\\DofusAPI.csproj",
+  "projectFilePath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusAPI\\DofusAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.5\\microsoft.aspnetcore.openapi.8.0.5.nupkg.sha512",

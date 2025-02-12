@@ -1,4 +1,6 @@
-﻿using DofusEquipementFetcher.Data;
+﻿using DofusData.EquipementData;
+using DofusData.PriceData;
+using DofusEquipementFetcher.Data;
 using DofusResourceFetcher.Data;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -9,6 +11,7 @@ public class EquipmentService
 {
     private readonly IMongoCollection<Equipment> _equipments;
     private readonly IMongoCollection<Resource> _resources;
+    private readonly IMongoCollection<Price> _price;
 
     public EquipmentService(IConfiguration config)
     {
@@ -16,6 +19,7 @@ public class EquipmentService
         var database = client.GetDatabase(config["MongoDB:DatabaseName"]);
         _equipments = database.GetCollection<Equipment>(config["MongoDB:EquipmentsCollection"]);
         _resources = database.GetCollection<Resource>(config["MongoDB:ResourcesCollection"]);
+        _price = database.GetCollection<Price>(config["MongoDB:PricesCollection"]);
     }
 
     public async Task<List<Equipment>> GetAll() => await _equipments.Find(e => true).ToListAsync();
@@ -49,25 +53,57 @@ public class EquipmentService
             .Limit(pageSize)
             .ToListAsync();
     }
-    public async Task<Equipment?> GetByAnkamaId(int ankamaId)
+    public async Task<EquipmentToReturn?> GetByAnkamaId(int ankamaId)
     {
-        var equipment = await _equipments.Find(e => e.AnkamaId == ankamaId).FirstOrDefaultAsync();
-        if (equipment == null || equipment.Recipe == null) return equipment;
-        
-        var resourceIds = equipment.Recipe.Select(r => r.ItemAnkamaId).ToList();
-        var resources = await _resources.Find(r => resourceIds.Contains(r.AnkamaId)).ToListAsync();
-
-        // Ajouter les informations complètes aux ressources de la recette
-        foreach (var ingredient in equipment.Recipe)
+        Equipment equipment = await _equipments.Find(e => e.AnkamaId == ankamaId).FirstOrDefaultAsync();
+        if (equipment == null || equipment.Recipe == null) return null;
+        else
         {
-            var resource = resources.FirstOrDefault(r => r.AnkamaId == ingredient.ItemAnkamaId);
-            if (resource != null)
+            var resourceIds = equipment.Recipe.Select(r => r.ItemAnkamaId).ToList();
+            var resources = await _resources.Find(r => resourceIds.Contains(r.AnkamaId)).ToListAsync();
+            List<Price>? ListEquipmentPrice = await _price.Find(p => p.AnkamaId == equipment.AnkamaId).ToListAsync();
+            Price? Equipmentprice = null;
+            
+            if (ListEquipmentPrice != null)
             {
-                ingredient.ResourceInfo = resource; 
+                Equipmentprice = ListEquipmentPrice.First();
+            }
+            
+            foreach (var ingredient in equipment.Recipe)
+            {
+                var resource = resources.FirstOrDefault(r => r.AnkamaId == ingredient.ItemAnkamaId);
+                if (resource != null)
+                {
+                    List<Price>? ListIngredientPrice = await _price.Find(p => p.AnkamaId == resource.AnkamaId).ToListAsync();
+                    Price? ResourcesPrice = null;
+                    if (ListIngredientPrice != null)
+                    {
+                        ResourcesPrice = ListIngredientPrice.First();
+                    }
+
+                    if (resource != null && ResourcesPrice != null )
+                    {
+                        ResourcesDataToReturn resourcesDataToReturn = new ResourcesDataToReturn(resource, ResourcesPrice);
+                        ingredient.ResourceInfo = resourcesDataToReturn; 
+                    }
+                }
+            }
+            if (equipment != null)
+            {
+                if (Equipmentprice == null)
+                {
+                    return new EquipmentToReturn(equipment, null);
+                }
+                else
+                {
+                    return new EquipmentToReturn(equipment, Equipmentprice);
+                }
+            }
+            else
+            {
+                return null;
             }
         }
-
-        return equipment;
     }
 
 

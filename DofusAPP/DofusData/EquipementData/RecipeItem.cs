@@ -8,14 +8,14 @@ public class RecipeItem
 {
     [BsonElement("item_ankama_id")]
     [JsonProperty("item_ankama_id")]
-    public int ItemAnkamaId { get; set; } // ID de la ressource
+    public int ItemAnkamaId { get; set; }
 
     [BsonElement("item_subtype")]
-    public string ItemSubtype { get; set; } // Type de la ressource
+    public string ItemSubtype { get; set; }
 
     [BsonElement("quantity")]
-    public int Quantity { get; set; } // Quantité requise pour le craft
+    public int Quantity { get; set; }
     
     [BsonIgnore]
-    public Resource? ResourceInfo { get; set; } // Détails de la ressource
+    public ResourcesDataToReturn? ResourceInfo { get; set; }
 }

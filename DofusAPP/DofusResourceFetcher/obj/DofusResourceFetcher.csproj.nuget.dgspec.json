@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\Dofus\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj": {}
+    "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\DofusData.csproj": {
+    "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\DofusData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\DofusData.csproj",
+        "projectUniqueName": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\DofusData.csproj",
         "projectName": "DofusData",
-        "projectPath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\DofusData.csproj",
+        "projectPath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\DofusData.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\obj\\",
+        "outputPath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Workspace\\Dofus\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj": {
+    "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\Dofus\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj",
+        "projectUniqueName": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj",
         "projectName": "DofusResourceFetcher",
-        "projectPath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj",
+        "projectPath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusResourceFetcher\\DofusResourceFetcher.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusResourceFetcher\\obj\\",
+        "outputPath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusResourceFetcher\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -94,8 +94,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\DofusData.csproj": {
-                "projectPath": "C:\\Workspace\\Dofus\\DofusAPP\\DofusData\\DofusData.csproj"
+              "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\DofusData.csproj": {
+                "projectPath": "C:\\Workspace\\Dofus\\DofusCounterAPI\\DofusAPP\\DofusData\\DofusData.csproj"
               }
             }
           }
