@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusAPI", "DofusAPI\DofusA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusData", "DofusData\DofusData.csproj", "{FCAD3249-C3BB-47CB-B1A0-D25C5C362DE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingDofusDB", "WebScrapingDofusDB\WebScrapingDofusDB.csproj", "{7EA9D7E7-07D4-40A9-8EC3-A88833391C97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OauthService", "OauthService\OauthService.csproj", "{378F74F7-56F0-4552-B171-A5EDE47835AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +32,9 @@ Global
 		{FCAD3249-C3BB-47CB-B1A0-D25C5C362DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCAD3249-C3BB-47CB-B1A0-D25C5C362DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCAD3249-C3BB-47CB-B1A0-D25C5C362DE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EA9D7E7-07D4-40A9-8EC3-A88833391C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EA9D7E7-07D4-40A9-8EC3-A88833391C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EA9D7E7-07D4-40A9-8EC3-A88833391C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EA9D7E7-07D4-40A9-8EC3-A88833391C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378F74F7-56F0-4552-B171-A5EDE47835AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378F74F7-56F0-4552-B171-A5EDE47835AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378F74F7-56F0-4552-B171-A5EDE47835AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378F74F7-56F0-4552-B171-A5EDE47835AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

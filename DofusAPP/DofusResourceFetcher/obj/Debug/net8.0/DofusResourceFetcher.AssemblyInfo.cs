@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DofusResourceFetcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac54057f23480e9ecc8b9c519c62109094ded030")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9675d7814b9f5c0cf7bb1ed0a51d813774961f22")]
 [assembly: System.Reflection.AssemblyProductAttribute("DofusResourceFetcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DofusResourceFetcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
