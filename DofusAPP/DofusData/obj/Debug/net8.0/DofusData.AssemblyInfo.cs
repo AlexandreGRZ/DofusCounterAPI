@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DofusData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dbdc262c5b1a463438a3451d46e8bcb00e79749")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09a2e215246cf7dd78484365603cae0ca91c1a7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DofusData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DofusData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

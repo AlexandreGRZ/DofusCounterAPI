@@ -31,7 +31,7 @@ public class ResourcesDataToReturn
         }
         else
         {
-            if (Price == null)
+            if (price == null)
             {
                 AnkamaId = resource.AnkamaId;
                 Name = resource.Name;

@@ -103,7 +103,7 @@ public class EquipmentService
                             ResourcesPrice = ListIngredientPrice.First();
                         }
 
-                        if (resource != null && ResourcesPrice != null )
+                        if (resource != null)
                         {
                             ResourcesDataToReturn resourcesDataToReturn = new ResourcesDataToReturn(resource, ResourcesPrice);
                             ingredient.ResourceInfo = resourcesDataToReturn; 
