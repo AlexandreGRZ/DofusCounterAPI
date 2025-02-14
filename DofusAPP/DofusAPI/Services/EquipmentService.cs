@@ -64,7 +64,7 @@ public class EquipmentService
                 List<Price>? ListEquipmentPrice = await _price.Find(p => p.AnkamaId == equipment.AnkamaId).ToListAsync();
                 Price? Equipmentprice = null;
             
-                if (ListEquipmentPrice != null)
+                if (ListEquipmentPrice.Count != 0)
                 {
                     Equipmentprice = ListEquipmentPrice.First();
                 }
