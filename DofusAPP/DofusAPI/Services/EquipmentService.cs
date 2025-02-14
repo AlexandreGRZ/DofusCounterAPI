@@ -56,40 +56,19 @@ public class EquipmentService
     public async Task<EquipmentToReturn?> GetByAnkamaId(int ankamaId)
     {
         Equipment equipment = await _equipments.Find(e => e.AnkamaId == ankamaId).FirstOrDefaultAsync();
-        if (equipment == null || equipment.Recipe == null) return null;
+        if (equipment == null) return null;
         else
         {
-            var resourceIds = equipment.Recipe.Select(r => r.ItemAnkamaId).ToList();
-            var resources = await _resources.Find(r => resourceIds.Contains(r.AnkamaId)).ToListAsync();
-            List<Price>? ListEquipmentPrice = await _price.Find(p => p.AnkamaId == equipment.AnkamaId).ToListAsync();
-            Price? Equipmentprice = null;
-            
-            if (ListEquipmentPrice != null)
+            if (equipment.Recipe == null)
             {
-                Equipmentprice = ListEquipmentPrice.First();
-            }
+                List<Price>? ListEquipmentPrice = await _price.Find(p => p.AnkamaId == equipment.AnkamaId).ToListAsync();
+                Price? Equipmentprice = null;
             
-            foreach (var ingredient in equipment.Recipe)
-            {
-                var resource = resources.FirstOrDefault(r => r.AnkamaId == ingredient.ItemAnkamaId);
-                if (resource != null)
+                if (ListEquipmentPrice != null)
                 {
-                    List<Price>? ListIngredientPrice = await _price.Find(p => p.AnkamaId == resource.AnkamaId).ToListAsync();
-                    Price? ResourcesPrice = null;
-                    if (ListIngredientPrice != null)
-                    {
-                        ResourcesPrice = ListIngredientPrice.First();
-                    }
-
-                    if (resource != null && ResourcesPrice != null )
-                    {
-                        ResourcesDataToReturn resourcesDataToReturn = new ResourcesDataToReturn(resource, ResourcesPrice);
-                        ingredient.ResourceInfo = resourcesDataToReturn; 
-                    }
+                    Equipmentprice = ListEquipmentPrice.First();
                 }
-            }
-            if (equipment != null)
-            {
+                
                 if (Equipmentprice == null)
                 {
                     return new EquipmentToReturn(equipment, null);
@@ -98,10 +77,49 @@ public class EquipmentService
                 {
                     return new EquipmentToReturn(equipment, Equipmentprice);
                 }
+                
             }
             else
             {
-                return null;
+                var resourceIds = equipment.Recipe.Select(r => r.ItemAnkamaId).ToList();
+                var resources = await _resources.Find(r => resourceIds.Contains(r.AnkamaId)).ToListAsync();
+                List<Price>? ListEquipmentPrice = await _price.Find(p => p.AnkamaId == equipment.AnkamaId).ToListAsync();
+                Price? Equipmentprice = null;
+            
+                if (ListEquipmentPrice.Count != 0)
+                {
+                    Equipmentprice = ListEquipmentPrice.First();
+                }
+            
+                foreach (var ingredient in equipment.Recipe)
+                {
+                    var resource = resources.FirstOrDefault(r => r.AnkamaId == ingredient.ItemAnkamaId);
+                    if (resource != null)
+                    {
+                        List<Price>? ListIngredientPrice = await _price.Find(p => p.AnkamaId == resource.AnkamaId).ToListAsync();
+                        Price? ResourcesPrice = null;
+                        if (ListIngredientPrice.Count != 0)
+                        {
+                            ResourcesPrice = ListIngredientPrice.First();
+                        }
+
+                        if (resource != null && ResourcesPrice != null )
+                        {
+                            ResourcesDataToReturn resourcesDataToReturn = new ResourcesDataToReturn(resource, ResourcesPrice);
+                            ingredient.ResourceInfo = resourcesDataToReturn; 
+                        }
+                    }
+                }
+                
+                if (Equipmentprice == null)
+                {
+                    return new EquipmentToReturn(equipment, null);
+                }
+                else
+                {
+                    return new EquipmentToReturn(equipment, Equipmentprice);
+                }
+                
             }
         }
     }
